@@ -1,19 +1,19 @@
 <script>
-    import Appbar from "./_components/Appbar.svelte";
+  import Appbar from "./_components/Appbar.svelte";
 </script>
 
-<svelte:head>
-    <title>Sourch</title>
-</svelte:head>
-
 <div>
-    <Appbar />
-    <slot />
+  <Appbar />
+  <slot />
 </div>
 
+<svelte:head>
+  <title>Sourch</title>
+</svelte:head>
+
 <style>
-    div {
-        margin: 0;
-        padding: 0;
-    }
+  div {
+    margin: 0;
+    padding: 0;
+  }
 </style>
