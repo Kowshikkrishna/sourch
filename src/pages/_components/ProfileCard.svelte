@@ -31,7 +31,7 @@
     grid-template-rows: minmax(50%, auto);
     grid-template-areas: "image userInfo";
     border: 3px double #80a8e5;
-    /* box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5); */
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
     margin-left: 1px;
     margin-right: 1px;
   }

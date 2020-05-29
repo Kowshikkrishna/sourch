@@ -25,6 +25,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1em;
+    padding: 0.5em;
+    padding-left: 0.3em;
   }
   .profile {
     grid-column: 1/4;
