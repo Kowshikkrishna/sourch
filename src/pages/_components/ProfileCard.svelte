@@ -2,6 +2,18 @@
   export let userObject;
 </script>
 
+<div class="profile-card">
+  <div class="imgs">
+    <img src={userObject.photoURL} alt="some" />
+  </div>
+  <div class="user-info">
+    <h2>Username: {userObject.displayName}</h2>
+    <p>Email: {userObject.email}</p>
+    <p>Status: null</p>
+    <p>Social Media Links: null</p>
+  </div>
+</div>
+
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Cabin&family=Inconsolata&family=Nunito&family=Nunito+Sans&family=Pacifico&family=Quicksand&family=Rubik&family=VT323&display=swap");
 
@@ -39,15 +51,3 @@
     border: 3px solid #80a8e5;
   }
 </style>
-
-<div class="profile-card">
-  <div class="imgs">
-    <img src={userObject.photoURL} alt="some" />
-  </div>
-  <div class="user-info">
-    <h2>Username: {userObject.displayName}</h2>
-    <p>Email: {userObject.email}</p>
-    <p>Status: null</p>
-    <p>Social Media Links: null</p>
-  </div>
-</div>

@@ -11,6 +11,16 @@
   ];
 </script>
 
+<div class="notifs">
+  <h3>Notifications</h3>
+  <div>
+    {#each notifs as n, i (n.id)}
+      <span>{n.notif}</span>
+    {/each}
+  </div>
+</div>
+
+
 <style>
   .notifs::-webkit-scrollbar {
     display: none;
@@ -20,11 +30,15 @@
     height: 180px;
     overflow: auto;
     border: 3px double #80a8e5;
-    padding: 20px 0px;
+		border-radius:14px;
+		box-sizing:border-box;
+    padding: 20px 20px;
     margin-left: none;
     margin-right: auto;
     margin-top: 15px;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+    -ms-overflow-style: none;
+		text-align:center;
   }
   .notifs:hover {
     border: 3px solid #80a8e5;
@@ -33,13 +47,13 @@
     background-color: #80a8e5;
     color: white;
     text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 2px 0;
+    margin:15px 0 30px 0;
+    padding: 1px 25px;
     border-radius: 20px;
+		display: inline-block;
   }
   .notifs div > span {
-    border-top: 2px solid #8bb0e7;
+    border-top: 1px solid #8bb0e7;
     display: block;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -47,12 +61,3 @@
     padding: 1em 1em;
   }
 </style>
-
-<div class="notifs">
-  <h3>Notifications</h3>
-  <div>
-    {#each notifs as n, i (n.id)}
-      <span>{n.notif}</span>
-    {/each}
-  </div>
-</div>

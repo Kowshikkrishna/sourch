@@ -15,6 +15,26 @@
   });
 </script>
 
+{#if currentUser === null}
+  <div class="user-not-found-error">
+    <h1>User Not Found Error</h1>
+    <p>Try Signing In</p>
+  </div>
+{:else}
+  <div class="grid">
+    <div class="profile">
+      <ProfileCard userObject={currentUser} />
+    </div>
+    <div class="noti">
+      <Noti />
+    </div>
+    <Communities />
+    <Follow />
+    <Bookmark />
+    <Support />
+  </div>
+{/if}
+
 <style>
   .user-not-found-error {
     text-align: center;
@@ -48,23 +68,3 @@
     }
   }
 </style>
-
-{#if currentUser === null}
-  <div class="user-not-found-error">
-    <h1>User Not Found Error</h1>
-    <p>Try Signing In</p>
-  </div>
-{:else}
-  <div class="grid">
-    <div class="profile">
-      <ProfileCard userObject={currentUser} />
-    </div>
-    <div class="noti">
-      <Noti />
-    </div>
-    <Communities />
-    <Follow />
-    <Bookmark />
-    <Support />
-  </div>
-{/if}

@@ -5,6 +5,22 @@
   auth.onAuthStateChanged(firebaseUser => (currentUser = firebaseUser));
 </script>
 
+<header>
+  <h1>
+    <a href="/">Sourch</a>
+  </h1>
+  <nav>
+    <a href="/">About</a>
+    <a href="/">Pricing</a>
+    <a href="/">Work</a>
+    {#if currentUser !== null}
+      <a href="/auth" on:click={() => auth.signOut()}>Sign Out</a>
+    {:else}
+      <a href="/auth">Auth</a>
+    {/if}
+  </nav>
+</header>
+
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Cabin&family=Inconsolata&family=Nunito&family=Nunito+Sans&family=Pacifico&family=Quicksand&family=Rubik&family=VT323&display=swap");
 
@@ -57,19 +73,3 @@
     font-size: 22px;
   }
 </style>
-
-<header>
-  <h1>
-    <a href="/">Sourch</a>
-  </h1>
-  <nav>
-    <a href="/">About</a>
-    <a href="/">Pricing</a>
-    <a href="/">Work</a>
-    {#if currentUser !== null}
-      <a href="/auth" on:click={() => auth.signOut()}>Sign Out</a>
-    {:else}
-      <a href="/auth">Auth</a>
-    {/if}
-  </nav>
-</header>
